@@ -2,14 +2,139 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Temp Links</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan‑Cancer AI Project – Variations in Tissue Staining & Scanning</title>
+    <style>
+        /* Simple, responsive layout */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #004080;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            font-style: italic;
+        }
+        nav {
+            background-color: #013e7a;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            border-bottom: 2px solid #004080;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        li a {
+            color: #004080;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        li a:hover {
+            color: #002550;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #f0f0f0;
+            margin-top: 2rem;
+        }
+        footer small {
+            display: block;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <p><a href="titan_coloured_by_scan_device.html" target="_blank">Interactive t-SNE visualisation for TITAN, coloured by scan device</a></p>
-    <p><a href="titan_coloured_by_staining_institute.html" target="_blank">Interactive t-SNE visualisation for TITAN, coloured by staining institute</a></p>
-    <p><a href="titan_coloured_by_subtype.html" target="_blank">Interactive t-SNE visualisation for TITAN, coloured by diagnosis</a></p>
-    <p><a href="uni_v2_coloured_by_scan_device.html" target="_blank">Interactive t-SNE visualisation for UNI-v2, coloured by scan device</a></p>
-    <p><a href="uni_v2_coloured_by_staining_institute.html" target="_blank">Interactive t-SNE visualisation for UNI-v2, coloured by staining institute</a></p>
-    <p><a href="uni_v2_coloured_by_subtype.html" target="_blank">Interactive t-SNE visualisation for UNI-v2, coloured by diagnosis</a></p>
+    <header>
+        <h1>Impact of Tissue Staining & Scanning on Pan‑Cancer AI Models</h1>
+        <p>Interactive Figures from our Study on Soft Tissue Tumours</p>
+    </header>
+    <nav>
+        <a href="#figures">Interactive Figures</a>
+        <a href="#about">About the Study</a>
+    </nav>
+    <main>
+        <section id="intro">
+            <p>
+                This page hosts interactive visualisations accompanying our manuscript titled
+                <em>“Impact of variation in tissue staining and scanning devices on performance of pan-cancer AI models: a study of soft tissue tumours”</em>.
+                Use the links below to explore diagnostic performance and t-SNE embeddings across cohorts.
+            </p>
+        </section>
+        <section id="figures">
+            <h2>Interactive Figures</h2>
+            <h3>Diagnosis‑Level Performance</h3>
+            <ul>
+                <li><a href="interactive_radar_plot_cohort_1.html" target="_blank">Cohort 1 – Test Set (Radar plot, Fig. 1 d)</a></li>
+                <li><a href="interactive_radar_plot_cohort_4.html" target="_blank">Cohort 4 – Test Set (Radar plot, Fig. 1 e)</a></li>
+            </ul>
+            <h3>t‑SNE Embeddings</h3>
+            <ul>
+                <li><strong>Colour by diagnosis</strong>
+                    <ul>
+                        <li><a href="uni_v2_coloured_by_subtype.html" target="_blank">UNI‑v2 (Fig. A2 a)</a></li>
+                        <li><a href="titan_coloured_by_subtype.html" target="_blank">TITAN (Fig. A2 b)</a></li>
+                    </ul>
+                </li>
+                <li><strong>Colour by scan device</strong>
+                    <ul>
+                        <li><a href="uni_v2_coloured_by_scan_device.html" target="_blank">UNI‑v2 (Fig. A2 c)</a></li>
+                        <li><a href="titan_coloured_by_scan_device.html" target="_blank">TITAN (Fig. A2 d)</a></li>
+                    </ul>
+                </li>
+                <li><strong>Colour by staining institute</strong>
+                    <ul>
+                        <li><a href="uni_v2_coloured_by_staining_institute.html" target="_blank">UNI‑v2 (Fig. A2 e)</a></li>
+                        <li><a href="titan_coloured_by_staining_institute.html" target="_blank">TITAN (Fig. A2 f)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="about">
+            <h2>About the Study</h2>
+            <p>Microscopic analysis of histopathology is considered the gold standard for cancer diagnosis and prognosis. Recent advances in AI, driven by large-scale digitisation and pan-cancer foundation models, are opening new opportunities for clinical integration. However, it remains unclear how robust these foundation models are to real-world sources of variability, particularly in staining and scanning protocols. In this study, we use soft tissue tumours, a rare and morphologically diverse tumour type, as a challenging test case to systematically investigate the colour-related robustness and generalisability of seven AI models across diverse real-world data sources. Controlled staining and scanning experiments are designed using the classification performance of 14 subtypes of soft tissue sarcomas and their mimics as a proxy. Foundation models, particularly UNI-v2, Virchow and TITAN, demonstrated encouraging robustness to staining and scanning variation, particularly when a small number of stain-varied slides were included in the training loop, highlighting their potential as adaptable and data-efficient tools for real-world digital pathology workflows.</p>
+        </section>
+    </main>
+    <footer>
+        <small>
+            © 2025 Pan‑Cancer AI Study. This page is under development. Last updated August 4, 2025.
+        </small>
+    </footer>
 </body>
 </html>
