@@ -1,138 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pan‑Cancer AI Project – Variations in Tissue Staining & Scanning</title>
-    <style>
-        /* Simple, responsive layout */
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f7f7f7;
-            color: #333;
-        }
-        header {
-            background-color: #004080;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
-        }
-        header p {
-            margin-top: 0.5rem;
-            font-size: 1rem;
-            font-style: italic;
-        }
-        nav {
-            background-color: #013e7a;
-            padding: 0.5rem;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 0.5rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            max-width: 960px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: #fff;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 {
-            border-bottom: 2px solid #004080;
-            padding-bottom: 0.5rem;
-            margin-top: 2rem;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-        li a {
-            color: #004080;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        li a:hover {
-            color: #002550;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #f0f0f0;
-            margin-top: 2rem;
-        }
-        footer small {
-            display: block;
-            color: #666;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Impact of Tissue Staining and Scanning</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;line-height:1.6;background:#f7f7f7;color:#333}
+    header{background:#004080;color:#fff;text-align:center;padding:1.2rem .5rem}
+    header h1{margin:0;font-size:1.8rem;font-weight:800}
+    header .subtitle{display:block;margin-top:.4rem;font-size:1.3rem;font-weight:800}
+    header .authors{margin:.8rem auto 0;max-width:1100px;font-style:italic}
+    header .affils{max-width:1100px;margin:.4rem auto 0;font-size:.85rem;line-height:1.35}
+    nav{background:#013e7a;text-align:center;padding:.55rem}
+    nav a{color:#fff;text-decoration:none;font-weight:700;margin:0 .6rem}
+    /* Buttons between nav and content */
+    .buttons-container{display:flex;justify-content:center;gap:14px;margin:18px 0}
+    .button{display:inline-flex;align-items:center;gap:8px;padding:.65rem 1.15rem;border-radius:26px;
+            background:#333;color:#fff;text-decoration:none;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+    .button:hover{background:#555}
+    .button i{font-size:1.1rem}
+    main{max-width:960px;margin:1.4rem auto 2.2rem;background:#fff;border-radius:6px;
+         box-shadow:0 2px 6px rgba(0,0,0,.08);padding:1rem}
+    h2{border-bottom:2px solid #004080;padding-bottom:.45rem;margin:1.4rem 0 .9rem}
+    ul{list-style:none;padding-left:0}
+    li{margin:.4rem 0}
+    li a{color:#004080;text-decoration:none}
+    li a:hover{color:#002b57}
+    footer{text-align:center;background:#f0f0f0;padding:1rem 0;margin-top:2rem}
+    footer small{color:#666}
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Impact of Tissue Staining & Scanning on Pan‑Cancer AI Models</h1>
-        <p>Interactive Figures from our Study on Soft Tissue Tumours</p>
-    </header>
-    <nav>
-        <a href="#figures">Interactive Figures</a>
-        <a href="#about">About the Study</a>
-    </nav>
-    <main>
-        <section id="intro">
-            <p>
-                This page hosts interactive visualisations accompanying our manuscript titled
-                <em>“Impact of variation in tissue staining and scanning devices on performance of pan-cancer AI models: a study of soft tissue tumours”</em>.
-                Use the links below to explore diagnostic performance and t-SNE embeddings across cohorts.
-            </p>
-        </section>
-        <section id="figures">
-            <h2>Interactive Figures</h2>
-            <h3>Diagnosis‑Level Performance</h3>
-            <ul>
-                <li><a href="interactive_radar_plot_cohort_1.html" target="_blank">Cohort 1 – Test Set (Radar plot, Fig. 1 d)</a></li>
-                <li><a href="interactive_radar_plot_cohort_4.html" target="_blank">Cohort 4 – Test Set (Radar plot, Fig. 1 e)</a></li>
-            </ul>
-            <h3>t‑SNE Embeddings</h3>
-            <ul>
-                <li><strong>Colour by diagnosis</strong>
-                    <ul>
-                        <li><a href="uni_v2_coloured_by_subtype.html" target="_blank">UNI‑v2 (Fig. A2 a)</a></li>
-                        <li><a href="titan_coloured_by_subtype.html" target="_blank">TITAN (Fig. A2 b)</a></li>
-                    </ul>
-                </li>
-                <li><strong>Colour by scan device</strong>
-                    <ul>
-                        <li><a href="uni_v2_coloured_by_scan_device.html" target="_blank">UNI‑v2 (Fig. A2 c)</a></li>
-                        <li><a href="titan_coloured_by_scan_device.html" target="_blank">TITAN (Fig. A2 d)</a></li>
-                    </ul>
-                </li>
-                <li><strong>Colour by staining institute</strong>
-                    <ul>
-                        <li><a href="uni_v2_coloured_by_staining_institute.html" target="_blank">UNI‑v2 (Fig. A2 e)</a></li>
-                        <li><a href="titan_coloured_by_staining_institute.html" target="_blank">TITAN (Fig. A2 f)</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section id="about">
-            <h2>About the Study</h2>
-            <p>Microscopic analysis of histopathology is considered the gold standard for cancer diagnosis and prognosis. Recent advances in AI, driven by large-scale digitisation and pan-cancer foundation models, are opening new opportunities for clinical integration. However, it remains unclear how robust these foundation models are to real-world sources of variability, particularly in staining and scanning protocols. In this study, we use soft tissue tumours, a rare and morphologically diverse tumour type, as a challenging test case to systematically investigate the colour-related robustness and generalisability of seven AI models across diverse real-world data sources. Controlled staining and scanning experiments are designed using the classification performance of 14 subtypes of soft tissue sarcomas and their mimics as a proxy. Foundation models, particularly UNI-v2, Virchow and TITAN, demonstrated encouraging robustness to staining and scanning variation, particularly when a small number of stain-varied slides were included in the training loop, highlighting their potential as adaptable and data-efficient tools for real-world digital pathology workflows.</p>
-        </section>
-    </main>
-    <footer>
-        <small>This page is under development. Last updated August 4, 2025.</small>
-    </footer>
+  <header>
+    <h1>
+      Impact of tissue staining and scanner variation on the performance of pathology foundation models
+      <span class="subtitle">a study of sarcomas and their mimics</span>
+    </h1>
+
+    <p class="authors">
+      Binghao Chai<sup>1†</sup>, Jianan Chen<sup>1†</sup>, Paul Cool<sup>2,3</sup>, Fatine Oumlil<sup>1,4</sup>,
+      Anna Tollitt<sup>4</sup>, David F. Steiner<sup>5</sup>, Tapabrata Chakraborti<sup>1,6*</sup>,
+      Adrienne M. Flanagan<sup>‡,1,4*</sup>
+    </p>
+
+    <p class="affils">
+      <sup>1</sup>Research Department of Pathology, UCL Cancer Institute, University College London, London, UK. <br/>
+      <sup>2</sup>The Robert Jones and Agnes Hunt Orthopaedic Hospital, Gobowen, UK. <br/>
+      <sup>3</sup>Keele University, Keele, UK. <br/>
+      <sup>4</sup>Royal National Orthopaedic Hospital, Stanmore, UK. <br/>
+      <sup>5</sup>Google Health, Mountain View, CA, USA. <br/>
+      <sup>6</sup>The Alan Turing Institute, London, UK. <br/>
+      † These authors contributed equally. ‡ Lead contact; On behalf of the AI Scope consortium.
+    </p>
+  </header>
+
+  <nav>
+    <a href="#figures">Interactive Figures</a>
+    <a href="#about">About the Study</a>
+  </nav>
+
+  <!-- Icon buttons between nav and content -->
+  <div class="buttons-container">
+    <a class="button" href="https://www.biorxiv.org/content/10.1101/2025.08.18.670932v2.abstract" target="_blank" aria-label="Paper (PDF)">
+      <i class="fa-regular fa-file-alt"></i> Paper
+    </a>
+    <a class="button" href="https://github.com/cbhindex/path_foundation_variation" target="_blank" aria-label="Code (GitHub)">
+      <i class="fab fa-github"></i> Code
+    </a>
+  </div>
+
+  <main>
+    <section id="figures">
+      <h2>Interactive Figures</h2>
+
+      <h3>Diagnosis-Level Performance</h3>
+      <ul>
+        <li><a href="interactive_radar_plot_cohort_1.html" target="_blank">Cohort 1 – Test Set (Radar plot, Fig. 1d)</a></li>
+        <li><a href="interactive_radar_plot_cohort_4.html" target="_blank">Cohort 4 – Test Set (Radar plot, Fig. 1e)</a></li>
+      </ul>
+
+      <h3>t-SNE Embeddings</h3>
+      <ul>
+        <li><strong>Colour by diagnosis</strong>
+          <ul>
+            <li><a href="uni_v2_coloured_by_subtype.html" target="_blank">UNI-v2 (Fig. A2a)</a></li>
+            <li><a href="titan_coloured_by_subtype.html" target="_blank">TITAN (Fig. A2b)</a></li>
+          </ul>
+        </li>
+        <li><strong>Colour by scan device</strong>
+          <ul>
+            <li><a href="uni_v2_coloured_by_scan_device.html" target="_blank">UNI-v2 (Fig. A2c)</a></li>
+            <li><a href="titan_coloured_by_scan_device.html" target="_blank">TITAN (Fig. A2d)</a></li>
+          </ul>
+        </li>
+        <li><strong>Colour by staining institute</strong>
+          <ul>
+            <li><a href="uni_v2_coloured_by_staining_institute.html" target="_blank">UNI-v2 (Fig. A2e)</a></li>
+            <li><a href="titan_coloured_by_staining_institute.html" target="_blank">TITAN (Fig. A2f)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h2>About the Study</h2>
+      <p>
+        Histopathological analysis is considered the gold standard for the diagnosis and prognostication of cancer. Recent advances in AI, driven by large-scale digitisation and pan-cancer foundation models, are opening new opportunities for clinical integration. However, it remains unclear how robust these foundation models are to real-world sources of variability, particularly in H&amp;E staining and scanning protocols. In this study, we use soft tissue tumours, a rare and morphologically diverse tumour type, as a challenging test case to systematically investigate the colour-related robustness and generalisability of seven AI models. Controlled staining and scanning experiments were utilised to assess model performance across diverse real-world data sources. Foundation models, particularly UNI-v2, Virchow and TITAN, demonstrated encouraging robustness to staining and scanning variation, particularly when a small number of stain-varied slides were included in the training loop, highlighting their potential as adaptable and data-efficient tools for real-world digital pathology workflows.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <small>This page is under development. Last updated September 2025.</small>
+  </footer>
 </body>
 </html>
